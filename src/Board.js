@@ -4,11 +4,11 @@ import './Board.css';
 
 class Board extends React.Component {
     render() {
-        const cards = [1,2,3,4];
+        //const cards = [1,2,3,4];
         return (
             <div className="board">
                 {
-                    cards.map((card) => <Card></Card>)
+                    this.props.deckCards.map((card) => <Card icon={ card.icon }/>)
                 }
             </div>
         );
