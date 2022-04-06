@@ -3,6 +3,7 @@ import Board from './Board';
 import deck from './component/deck';
 import './StartApp.css';
 import Title  from './Title';
+import Github from './Github';
 
 const getInitState = () => {
     const deckCards = deck();
@@ -23,6 +24,7 @@ class StartApp extends React.Component {
             <div className='StartApp'>
                 <Title></Title>
                 <Board deckCards = {this.state.deckCards}/>
+                <Github></Github>
             </div>
         );
     }
