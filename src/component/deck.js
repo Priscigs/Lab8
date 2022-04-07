@@ -1,18 +1,18 @@
 import shuffle from 'lodash.shuffle';
-import FontAwesomeClasses from './fontAwesomeClasses'
+import imagesDeck from './imagesDeck';
 
 const fourandfour = 16;
 
 export default () => {
-    const iconosFontA = FontAwesomeClasses(); 
+    const iconsDeck = imagesDeck(); 
 
     // ARRAY DE CARTAS ALEATORIAS 
     let cards = [];
     
     while (cards.length < fourandfour) {
-        const index = Math.floor(Math.random() * iconosFontA.length);
+        const index = Math.floor(Math.random() * iconsDeck.length);
         const card = {
-            icon: iconosFontA.splice(index, 1)[0],
+            icon: iconsDeck.splice(index, 1)[0],
             found: false
         };
 

@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const FileLoader = require("file-loader")
 
 module.exports = {
     mode: "development",
@@ -32,6 +33,14 @@ module.exports = {
                         presets: ['@babel/preset-env', '@babel/preset-react'] 
                     }
                 }
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                  {
+                    loader: 'file-loader',
+                  },
+                ],
             }
         ],
     },
